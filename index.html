@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Map App</title>
+        <style>
+            html,
+            body {
+                margin: 0;
+            }
+            #map {
+                height: 70vh;
+                width: 70vw;
+            }
+            #topbar {
+            }
+        </style>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""
+        />
+        <script
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""
+        ></script>
+    </head>
+    <body>
+        <div id="app">
+            <div id="topbar">
+                <label for="category-select">Category</label>
+                <select id="category-select"></select>
+            </div>
+            <div id="map"></div>
+        </div>
+        <script>
+            const categories = [
+                {
+                    id: 0,
+                    name: "Stores & Shops",
+                },
+                {
+                    id: 1,
+                    name: "Events & Pop-Ups",
+                },
+                {
+                    id: 2,
+                    name: "Recycling & Collection Points",
+                },
+                {
+                    id: 3,
+                    name: "Educational & Awareness Spaces",
+                },
+                {
+                    id: 4,
+                    name: "Collaborative Spaces",
+                },
+                {
+                    id: 5,
+                    name: "Local Initiatives & Collaborations",
+                },
+            ];
+            const data = [
+                {
+                    name: "IKIEL",
+                    category: "second hand boutique",
+                    address: "Kaiserstrasse 68 1070",
+                    latitude: 48.203839,
+                    longitude: 16.340357,
+                    opening_hours: "Mo-Sa: 12-18",
+                    price_range: "",
+                    google_maps_link:
+                        "https://maps.app.goo.gl/DQWjASux2Z5uquBd6",
+                },
+                {
+                    name: "Flea market",
+                    category: "flea market",
+                    address: "Schottenfeldgasse 29/2",
+                    latitude: 48.19966,
+                    longitude: 16.342906559703767,
+                    opening_hours: "Tue&Thurs:10-12 & 13-17",
+                    price_range: "",
+                    google_maps_link:
+                        "https://maps.app.goo.gl/6yoUh7XjMQUzQ7Sq5",
+                },
+                {
+                    name: "Wiener Hilfswerk",
+                    category: "Recycling & Collection Points",
+                    address: "Schottenfeldgasse 29",
+                    latitude: 48.199792,
+                    longitude: 16.342992,
+                    opening_hours: "Mo-Fr 8-16",
+                    price_range: "",
+                    google_maps_link:
+                        "https://maps.app.goo.gl/W3a84CENazNTYrYR6",
+                },
+                {
+                    name: "Ebenberg",
+                    category: "Stores & Shops",
+                    address: "Neubaugasse 4",
+                    latitude: 48.198709,
+                    longitude: 16.350012,
+                    opening_hours: "Mo-Fr 11-19",
+                    price_range: "",
+                    google_maps_link:
+                        "https://maps.app.goo.gl/mXnfEiVgUdZe8CK58",
+                },
+                {
+                    name: "Zweitkleid7",
+                    category: "Charity shop",
+                    address: "Westbahnstaße 7",
+                    latitude: 48.201674,
+                    longitude: 16.346763,
+                    opening_hours: "Tue-Fri: 11-18 Sat 11-15",
+                    price_range: "",
+                    google_maps_link:
+                        "https://maps.app.goo.gl/ZrxiMFnnaDwtc2738",
+                },
+                {
+                    name: "GuterStoff",
+                    category: "Stores & Shops",
+                    address: "Lindengasse 28",
+                    latitude: 48.200426,
+                    longitude: 16.351175,
+                    opening_hours: "Di-Fr 12-18.30, Sat 11-17",
+                    price_range: "18-70 €",
+                    google_maps_link:
+                        "https://maps.app.goo.gl/HJwjzBhtmKurNiQC8",
+                },
+                {
+                    name: "herr und frau klein",
+                    category: "Stores & Shops",
+                    address: "Kirchengasse 7",
+                    latitude: 48.200278,
+                    longitude: 16.352365,
+                    opening_hours: "Mo-Sat 10-18",
+                    price_range: "14-1270 €",
+                    google_maps_link:
+                        "https://maps.app.goo.gl/Cx2Yz23FULydSCWBA",
+                },
+                {
+                    name: "zerum",
+                    category: "stores & Shops",
+                    address: "Kirchengasse 13",
+                    latitude: 48.2012387,
+                    longitude: 16.3517222,
+                    opening_hours: "Mo-Fr 10-19, Sat 10-18",
+                    price_range: "24-250 €",
+                    google_maps_link:
+                        "https://maps.app.goo.gl/kkc7L5gUs1h6Feia7",
+                },
+                {
+                    name: "Glein",
+                    category: "stores & Shops",
+                    address: "Neustiftgasse 18",
+                    latitude: 48.205465,
+                    longitude: 16.3344797,
+                    opening_hours: "Mo-Sat 12-18",
+                    price_range: "30-2000 €",
+                    google_maps_link:
+                        "https://maps.app.goo.gl/tkMgmVwkMGX4hykZA",
+                },
+                {
+                    name: "OTOTO Store & Coffee",
+                    category: "Stores & Shops/ Events & Pop-Ups",
+                    address: "Zieglergasse 38",
+                    latitude: 48.2016083,
+                    longitude: 16.3426458,
+                    opening_hours: "Mo-Fr 8-19, Sat 9-18",
+                    price_range: "",
+                    google_maps_link:
+                        "https://maps.app.goo.gl/BfMJXAtogBjkDRaMA",
+                },
+                {
+                    name: "Freitag Store Wien",
+                    category: "Stores & Shops",
+                    address: "Neubaugasse 26",
+                    latitude: 48.20050357,
+                    longitude: 16.34955456,
+                    opening_hours: "",
+                    price_range: "",
+                    google_maps_link:
+                        "https://maps.app.goo.gl/cwtd3V5b8ts62Ca8A",
+                },
+                {
+                    name: "7stern Flohmarkt",
+                    category: "flea market / event",
+                    address: "Siebensterngasse 31",
+                    latitude: 48.20200555,
+                    longitude: 16.35152762,
+                    opening_hours: "Sat-Sun 12-18 (monthly)",
+                    price_range: "",
+                    google_maps_link:
+                        "https://maps.app.goo.gl/CXkDtQd59jgqFsgC8",
+                },
+            ];
+            const map = L.map("map").setView([48.2081, 16.3713], 13);
+            L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                maxZoom: 19,
+                attribution:
+                    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            }).addTo(map);
+
+            const categorySelect = document.getElementById("category-select");
+            categories.forEach(({ id, name }) => {
+                const option = document.createElement("option");
+                option.value = id;
+                option.textContent = name;
+                categorySelect.appendChild(option);
+            });
+
+            // const selector = document.getElementById("city-select");
+            // const viennaMarker = L.marker([48.2081, 16.3713])
+            //     .addTo(map)
+            //     .bindPopup("<b>Hello, Vienna!</b><br>48.2081° N, 16.3713° E");
+            // const pragueMarker = L.marker([50.0755, 14.4378])
+            //     .addTo(map)
+            //     .bindPopup("<b>Hello, Prague!</b><br>50.0755° N, 14.4378° E");
+            // const copenhagenMarker = L.marker([55.6761, 12.5683])
+            //     .addTo(map)
+            //     .bindPopup(
+            //         "<b>Hello, Copenhagen!</b><br>55.6761° N, 12.5683° E"
+            //     );
+
+            // const markers = [viennaMarker, pragueMarker, copenhagenMarker];
+
+            // selector.addEventListener("change", (e) => {
+            //     const selectedMarker = markers[e.target.value];
+            //     map.setView(selectedMarker.getLatLng(), 13);
+            //     selectedMarker.openPopup();
+            // });
+        </script>
+    </body>
+</html>
