@@ -48,10 +48,28 @@
             <div id="topbar">
                 <label for="category-select">Category</label>
                 <select id="category-select"></select>
+                <button onclick="clearCategoryFilter">clear</button>
             </div>
             <div id="map"></div>
         </div>
         <script>
+            function clearCategoryFilter() {
+                categoryFilter = null;
+                filterByCategory();
+            }
+            function filterByCategory() {
+                markers.forEach((marker) => {
+                    if (
+                        categoryFilter === null ||
+                        marker.category === categoryFilter
+                    ) {
+                        marker.addTo(map);
+                    } else {
+                        marker.remove();
+                    }
+                });
+            }
+
             const categories = new Map([
                 ["Stores & Shops", "red"],
                 ["Flea Markets", "purple"],
@@ -204,12 +222,12 @@
             }).addTo(map);
 
             const categorySelect = document.getElementById("category-select");
-            categories.forEach(({ id, name }) => {
+            for (const [name, color] of categories.entries()) {
                 const option = document.createElement("option");
-                option.value = id;
+                option.value = name;
                 option.textContent = name;
                 categorySelect.appendChild(option);
-            });
+            }
 
             const markers = [];
             data.forEach((location) => {
@@ -222,35 +240,27 @@
                     prefix: "glyphicon",
                 });
 
-                markers.push(
-                    L.marker([location.latitude, location.longitude], {
+                const marker = L.marker(
+                    [location.latitude, location.longitude],
+                    {
                         icon: customMarker,
-                    })
-                        .addTo(map)
-                        .bindPopup(`<b>${location.name}</b>`)
-                );
+                        riseOnHover: true,
+                    }
+                )
+                    .addTo(map)
+                    .bindPopup(
+                        `<b>${location.name}</b><br>${location.address}<br>${location.opening_hours}<br><a href=${location.google_maps_link}>Google Maps</a>`
+                    );
+                marker.category = location.category;
+                markers.push(marker);
             });
 
-            // const selector = document.getElementById("city-select");
-            // const viennaMarker = L.marker([48.2081, 16.3713])
-            //     .addTo(map)
-            //     .bindPopup("<b>Hello, Vienna!</b><br>48.2081° N, 16.3713° E");
-            // const pragueMarker = L.marker([50.0755, 14.4378])
-            //     .addTo(map)
-            //     .bindPopup("<b>Hello, Prague!</b><br>50.0755° N, 14.4378° E");
-            // const copenhagenMarker = L.marker([55.6761, 12.5683])
-            //     .addTo(map)
-            //     .bindPopup(
-            //         "<b>Hello, Copenhagen!</b><br>55.6761° N, 12.5683° E"
-            //     );
+            let categoryFilter = null;
 
-            // const markers = [viennaMarker, pragueMarker, copenhagenMarker];
-
-            // selector.addEventListener("change", (e) => {
-            //     const selectedMarker = markers[e.target.value];
-            //     map.setView(selectedMarker.getLatLng(), 13);
-            //     selectedMarker.openPopup();
-            // });
+            categorySelect.addEventListener("change", (e) => {
+                categoryFilter = e.target.value;
+                filterByCategory();
+            });
         </script>
     </body>
 </html>
