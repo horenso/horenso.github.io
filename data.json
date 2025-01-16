@@ -1,0 +1,122 @@
+[
+    {
+        "name": "IKIEL",
+        "category": "Stores & Shops",
+        "address": "Kaiserstrasse 68 1070",
+        "latitude": 48.203839,
+        "longitude": 16.340357,
+        "opening_hours": "Mo-Sa: 12-18",
+        "price_range": "",
+        "google_maps_link": "https://maps.app.goo.gl/DQWjASux2Z5uquBd6"
+    },
+    {
+        "name": "Flea market",
+        "category": "Flea Markets",
+        "address": "Schottenfeldgasse 29/2",
+        "latitude": 48.19966,
+        "longitude": 16.342906559703767,
+        "opening_hours": "Tue&Thurs:10-12 & 13-17",
+        "price_range": "",
+        "google_maps_link": "https://maps.app.goo.gl/6yoUh7XjMQUzQ7Sq5"
+    },
+    {
+        "name": "Wiener Hilfswerk",
+        "category": "Recycling & Collection Points",
+        "address": "Schottenfeldgasse 29",
+        "latitude": 48.199792,
+        "longitude": 16.342992,
+        "opening_hours": "Mo-Fr 8-16",
+        "price_range": "",
+        "google_maps_link": "https://maps.app.goo.gl/W3a84CENazNTYrYR6"
+    },
+    {
+        "name": "Ebenberg",
+        "category": "Stores & Shops",
+        "address": "Neubaugasse 4",
+        "latitude": 48.198709,
+        "longitude": 16.350012,
+        "opening_hours": "Mo-Fr 11-19",
+        "price_range": "",
+        "google_maps_link": "https://maps.app.goo.gl/mXnfEiVgUdZe8CK58"
+    },
+    {
+        "name": "Zweitkleid7",
+        "category": "Stores & Shops",
+        "address": "Westbahnstaße 7",
+        "latitude": 48.201674,
+        "longitude": 16.346763,
+        "opening_hours": "Tue-Fri: 11-18 Sat 11-15",
+        "price_range": "",
+        "google_maps_link": "https://maps.app.goo.gl/ZrxiMFnnaDwtc2738"
+    },
+    {
+        "name": "GuterStoff",
+        "category": "Stores & Shops",
+        "address": "Lindengasse 28",
+        "latitude": 48.200426,
+        "longitude": 16.351175,
+        "opening_hours": "Di-Fr 12-18.30, Sat 11-17",
+        "price_range": "18-70 €",
+        "google_maps_link": "https://maps.app.goo.gl/HJwjzBhtmKurNiQC8"
+    },
+    {
+        "name": "herr und frau klein",
+        "category": "Stores & Shops",
+        "address": "Kirchengasse 7",
+        "latitude": 48.200278,
+        "longitude": 16.352365,
+        "opening_hours": "Mo-Sat 10-18",
+        "price_range": "14-1270 €",
+        "google_maps_link": "https://maps.app.goo.gl/Cx2Yz23FULydSCWBA"
+    },
+    {
+        "name": "zerum",
+        "category": "Stores & Shops",
+        "address": "Kirchengasse 13",
+        "latitude": 48.2012387,
+        "longitude": 16.3517222,
+        "opening_hours": "Mo-Fr 10-19, Sat 10-18",
+        "price_range": "24-250 €",
+        "google_maps_link": "https://maps.app.goo.gl/kkc7L5gUs1h6Feia7"
+    },
+    {
+        "name": "Glein",
+        "category": "Stores & Shops",
+        "address": "Neustiftgasse 18",
+        "latitude": 48.205465,
+        "longitude": 16.3344797,
+        "opening_hours": "Mo-Sat 12-18",
+        "price_range": "30-2000 €",
+        "google_maps_link": "https://maps.app.goo.gl/tkMgmVwkMGX4hykZA"
+    },
+    {
+        "name": "OTOTO Store & Coffee",
+        "category": "Stores & Shops",
+        "address": "Zieglergasse 38",
+        "latitude": 48.2016083,
+        "longitude": 16.3426458,
+        "opening_hours": "Mo-Fr 8-19, Sat 9-18",
+        "price_range": "",
+        "google_maps_link": "https://maps.app.goo.gl/BfMJXAtogBjkDRaMA"
+    },
+    {
+        "name": "Freitag Store Wien",
+        "category": "Stores & Shops",
+        "address": "Neubaugasse 26",
+        "latitude": 48.20050357,
+        "longitude": 16.34955456,
+        "opening_hours": "",
+        "price_range": "",
+        "google_maps_link": "https://maps.app.goo.gl/cwtd3V5b8ts62Ca8A"
+    },
+    {
+        "name": "7stern Flohmarkt",
+        "category": "Flea Markets",
+        "address": "Siebensterngasse 31",
+        "latitude": 48.20200555,
+        "longitude": 16.35152762,
+        "opening_hours": "Sat-Sun 12-18 (monthly)",
+        "price_range": "",
+        "google_maps_link": "https://maps.app.goo.gl/CXkDtQd59jgqFsgC8"
+    }
+]
