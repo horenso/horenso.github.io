@@ -11,7 +11,7 @@
     },
     {
         "name": "Flea market",
-        "category": "Flea Markets",
+        "category": "Events & Pop-Ups",
         "address": "Schottenfeldgasse 29/2",
         "latitude": 48.19966,
         "longitude": 16.342906559703767,
@@ -111,7 +111,7 @@
     },
     {
         "name": "7stern Flohmarkt",
-        "category": "Flea Markets",
+        "category": "Events & Pop-Ups",
         "address": "Siebensterngasse 31",
         "latitude": 48.20200555,
         "longitude": 16.35152762,

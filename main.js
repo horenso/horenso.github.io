@@ -2,6 +2,7 @@
 let currentCategory = "all";
 let markers = [];
 let map = null;
+let categoryIcons = new Map();
 
 const categorySelect = document.getElementById("category-select");
 
@@ -14,34 +15,46 @@ async function initMap() {
     }).addTo(map);
 
     const categories = {
-        "Stores & Shops": "red",
-        "Flea Markets": "purple",
-        "Events & Pop-Ups": "green",
-        "Recycling & Collection Points": "blue",
-        "Educational & Awareness Spaces": "pink",
-        "Collaborative Spaces": "orange",
-        "Local Initiatives & Collaborations": "darkgreen",
+        "Stores & Shops": "stores_shops.png",
+        "Events & Pop-Ups": "events_and_popups.png",
+        "Recycling & Collection Points": "recycling_and_collection_points.png",
+        "Educational & Awareness Spaces":
+            "educational_and_awareness_spaces.png",
+        "Collaborative Spaces": "collaborative_spaces.png",
+        "Local Initiatives & Collaborations":
+            "local_spaces_and_collaborations.png",
     };
 
     // Populate the dropdown
-    Object.keys(categories).forEach((name) => {
+    Object.entries(categories).forEach(([category, fileName]) => {
         const option = document.createElement("option");
-        option.value = name;
-        option.textContent = name;
+        option.value = category;
+        option.textContent = category;
         categorySelect.appendChild(option);
+        categoryIcons.set(
+            category,
+            L.icon({
+                iconUrl: `/icons/${fileName}`,
+                iconSize: [24, 33],
+                iconAnchor: [11, 31],
+                popupAnchor: [0, -32],
+            })
+        );
     });
 
     // Fetch data and add markers
     const data = await (await fetch("/data.json")).json();
     data.forEach((item) => {
         const color = categories[item.category] || "gray";
-        const icon = L.AwesomeMarkers.icon({
-            icon: "info-sign",
-            markerColor: color,
-            prefix: "glyphicon",
-        });
 
-        const marker = L.marker([item.latitude, item.longitude], { icon })
+        const icon = categoryIcons.get(item.category);
+        if (icon === undefined) {
+            console.error(`Icon ${item.category} is not found`);
+        }
+
+        const marker = L.marker([item.latitude, item.longitude], {
+            icon: categoryIcons.get(item.category),
+        })
             .addTo(map)
             .bindPopup(
                 `<b>${item.name}</b><br>${item.address}<br>${item.opening_hours}<br><a href="${item.google_maps_link}" target="_blank">Google Maps</a>`
