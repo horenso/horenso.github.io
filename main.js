@@ -1,5 +1,12 @@
+// Global variables
+let currentCategory = "all";
+let markers = [];
+let map = null;
+
+const categorySelect = document.getElementById("category-select");
+
 async function initMap() {
-    const map = L.map("map").setView([48.2081, 16.3713], 13);
+    map = L.map("map").setView([48.2081, 16.3713], 13);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution:
@@ -15,9 +22,6 @@ async function initMap() {
         "Collaborative Spaces": "orange",
         "Local Initiatives & Collaborations": "darkgreen",
     };
-
-    const categorySelect = document.getElementById("category-select");
-    const markers = [];
 
     // Populate the dropdown
     Object.keys(categories).forEach((name) => {
@@ -47,21 +51,30 @@ async function initMap() {
         markers.push(marker);
     });
 
-    // Filter markers on category change
-    let currentCategory = null;
     categorySelect.addEventListener("change", (e) => {
         currentCategory = e.target.value === "all" ? null : e.target.value;
-        markers.forEach((marker) => {
-            if (!currentCategory || marker.category === currentCategory) {
-                marker.addTo(map);
-            } else {
-                marker.remove();
-            }
-        });
+        filterByCategory();
+    });
+
+    window.addEventListener("resize", () => {
+        map.invalidateSize();
     });
 }
 
+function filterByCategory() {
+    markers.forEach((marker) => {
+        if (currentCategory === "all" || marker.category === currentCategory) {
+            marker.addTo(map);
+        } else {
+            marker.remove();
+        }
+    });
+}
+
+function clearCategoryFilter() {
+    currentCategory = "all";
+    categorySelect.value = "all";
+    filterByCategory();
+}
+
 document.addEventListener("DOMContentLoaded", initMap);
-window.addEventListener("resize", () => {
-    map.invalidateSize();
-});
