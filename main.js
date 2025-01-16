@@ -7,7 +7,7 @@ let categoryIcons = new Map();
 const categorySelect = document.getElementById("category-select");
 
 async function initMap() {
-    map = L.map("map").setView([48.2081, 16.3713], 13);
+    map = L.map("map").setView([48.20169735458342, 16.346863966424817], 15);
     L.tileLayer(
         "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.{ext}",
         {
