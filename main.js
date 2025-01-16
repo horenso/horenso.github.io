@@ -70,7 +70,7 @@ async function initMap() {
     });
 
     categorySelect.addEventListener("change", (e) => {
-        currentCategory = e.target.value === "all" ? null : e.target.value;
+        currentCategory = e.target.value;
         filterByCategory();
     });
 
