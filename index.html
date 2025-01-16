@@ -4,18 +4,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Map App</title>
-        <style>
-            html,
-            body {
-                margin: 0;
-            }
-            #map {
-                height: 70vh;
-                width: 70vw;
-            }
-            #topbar {
-            }
-        </style>
         <link
             rel="stylesheet"
             href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -42,6 +30,8 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
+        <link rel="stylesheet" href="/styles.css" />
+        <script src="/main.js" defer></script>
     </head>
     <body>
         <div id="app">
@@ -54,87 +44,5 @@
             </div>
             <div id="map"></div>
         </div>
-        <script>
-            function clearCategoryFilter() {
-                categoryFilter = null;
-                categorySelect.value = "all";
-                filterByCategory();
-            }
-            function filterByCategory() {
-                markers.forEach((marker) => {
-                    if (
-                        categoryFilter === null ||
-                        marker.category === categoryFilter
-                    ) {
-                        marker.addTo(map);
-                    } else {
-                        marker.remove();
-                    }
-                });
-            }
-
-            const categories = new Map([
-                ["Stores & Shops", "red"],
-                ["Flea Markets", "purple"],
-                ["Events & Pop-Ups", "green"],
-                ["Recycling & Collection Points", "blue"],
-                ["Educational & Awareness Spaces", "pink"],
-                ["Collaborative Spaces", "orange"],
-                ["Local Initiatives & Collaborations", "darkgreen"],
-            ]);
-
-            const map = L.map("map").setView([48.2081, 16.3713], 13);
-            L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-                maxZoom: 19,
-                attribution:
-                    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-            }).addTo(map);
-
-            const categorySelect = document.getElementById("category-select");
-            for (const [name, color] of categories.entries()) {
-                const option = document.createElement("option");
-                option.value = name;
-                option.textContent = name;
-                categorySelect.appendChild(option);
-            }
-
-            const markers = [];
-            data.forEach((location) => {
-                const categoryColor =
-                    categories.get(location.category) ?? "gray";
-
-                const customMarker = L.AwesomeMarkers.icon({
-                    icon: "info-sign",
-                    markerColor: categoryColor,
-                    prefix: "glyphicon",
-                });
-
-                const marker = L.marker(
-                    [location.latitude, location.longitude],
-                    {
-                        icon: customMarker,
-                        riseOnHover: true,
-                    }
-                )
-                    .addTo(map)
-                    .bindPopup(
-                        `<b>${location.name}</b><br>${location.address}<br>${location.opening_hours}<br><a href=${location.google_maps_link}>Google Maps</a>`
-                    );
-                marker.category = location.category;
-                markers.push(marker);
-            });
-
-            let categoryFilter = null;
-
-            categorySelect.addEventListener("change", (e) => {
-                const value = e.target.value;
-                if (value === "all") {
-                    categoryFilter = null;
-                } else {
-                    categoryFilter = value;
-                }
-                filterByCategory();
-            });
-        </script>
     </body>
 </html>
