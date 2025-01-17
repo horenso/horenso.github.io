@@ -6,7 +6,6 @@
         "latitude": 48.203998961963684,
         "longitude": 16.340291611637664,
         "opening_hours": "Mo-Sa: 12-18",
-        "price_range": "",
         "google_maps_link": "https://maps.app.goo.gl/DQWjASux2Z5uquBd6"
     },
     {
@@ -16,7 +15,6 @@
         "latitude": 48.19991727392932,
         "longitude": 16.342803213491294,
         "opening_hours": "Tue&Thurs:10-12 & 13-17",
-        "price_range": "",
         "google_maps_link": "https://maps.app.goo.gl/6yoUh7XjMQUzQ7Sq5"
     },
     {
@@ -26,7 +24,6 @@
         "latitude": 48.19976147204459,
         "longitude": 16.343157015344932,
         "opening_hours": "Mo-Fr 8-16",
-        "price_range": "",
         "google_maps_link": "https://maps.app.goo.gl/W3a84CENazNTYrYR6"
     },
     {
@@ -36,7 +33,6 @@
         "latitude": 48.19908486610045,
         "longitude": 16.350179946034803,
         "opening_hours": "Mo-Fr 11-19",
-        "price_range": "",
         "google_maps_link": "https://maps.app.goo.gl/mXnfEiVgUdZe8CK58"
     },
     {
@@ -46,7 +42,6 @@
         "latitude": 48.20169735458342,
         "longitude": 16.346863966424817,
         "opening_hours": "Tue-Fri: 11-18 Sat 11-15",
-        "price_range": "",
         "google_maps_link": "https://maps.app.goo.gl/ZrxiMFnnaDwtc2738"
     },
     {
@@ -56,7 +51,6 @@
         "latitude": 48.20050592113647,
         "longitude": 16.351154755818833,
         "opening_hours": "Di-Fr 12-18.30, Sat 11-17",
-        "price_range": "18-70 €",
         "google_maps_link": "https://maps.app.goo.gl/HJwjzBhtmKurNiQC8"
     },
     {
@@ -66,7 +60,6 @@
         "latitude": 48.200430484061265,
         "longitude": 16.35228598763679,
         "opening_hours": "Mo-Sat 10-18",
-        "price_range": "14-1270 €",
         "google_maps_link": "https://maps.app.goo.gl/Cx2Yz23FULydSCWBA"
     },
     {
@@ -76,7 +69,6 @@
         "latitude": 48.20143162231027,
         "longitude": 16.351835355818835,
         "opening_hours": "Mo-Fr 10-19, Sat 10-18",
-        "price_range": "24-250 €",
         "google_maps_link": "https://maps.app.goo.gl/kkc7L5gUs1h6Feia7"
     },
     {
@@ -86,7 +78,6 @@
         "latitude": 48.20548275135813,
         "longitude": 16.352904383116194,
         "opening_hours": "Mo-Sat 12-18",
-        "price_range": "30-2000 €",
         "google_maps_link": "https://maps.app.goo.gl/tkMgmVwkMGX4hykZA"
     },
     {
@@ -96,7 +87,6 @@
         "latitude": 48.2018206578102,
         "longitude": 16.345216457672464,
         "opening_hours": "Mo-Fr 8-19, Sat 9-18",
-        "price_range": "",
         "google_maps_link": "https://maps.app.goo.gl/BfMJXAtogBjkDRaMA"
     },
     {
@@ -106,7 +96,6 @@
         "latitude": 48.200354874826296,
         "longitude": 16.3495441865087,
         "opening_hours": "",
-        "price_range": "",
         "google_maps_link": "https://maps.app.goo.gl/cwtd3V5b8ts62Ca8A"
     },
     {
@@ -116,7 +105,186 @@
         "latitude": 48.20214886571251,
         "longitude": 16.35160564418117,
         "opening_hours": "Sat-Sun 12-18 (monthly)",
-        "price_range": "",
         "google_maps_link": "https://maps.app.goo.gl/CXkDtQd59jgqFsgC8"
+    },
+    {
+        "name": "Kolping Altkleidercontainer",
+        "category": "Recycling & Collection Points",
+        "address": "Stiftgasse 2",
+        "opening_hours": "always",
+        "google_maps_link": "https://maps.app.goo.gl/VD73GyjbKq7sBhkVA",
+        "latitude": 48.2011433,
+        "longitude": 16.3556772
+    },
+    {
+        "name": "Kolping Altkleidercontainer",
+        "category": "Recycling & Collection Points",
+        "address": "Seidengasse 39",
+        "opening_hours": "always",
+        "google_maps_link": "https://maps.app.goo.gl/GnFP78DEGXWkRGnn8",
+        "latitude": 48.2002175,
+        "longitude": 16.3404879
+    },
+    {
+        "name": "Kolping Altkleidercontainer",
+        "category": "Recycling & Collection Points",
+        "address": "Neubaugasse 74",
+        "opening_hours": "always",
+        "google_maps_link": "https://maps.app.goo.gl/PwXNb4rdHBShSzTD9",
+        "latitude": 48.2044397,
+        "longitude": 16.3491344
+    },
+    {
+        "name": "Kolping Altkleidercontainer",
+        "category": "Recycling & Collection Points",
+        "address": "Burggasse 82",
+        "opening_hours": "always",
+        "google_maps_link": "https://maps.app.goo.gl/TzWqWhwRZNG5E5NE7",
+        "latitude": 48.2045694,
+        "longitude": 16.3461102
+    },
+    {
+        "name": "Kolping Altkleidercontainer",
+        "category": "Recycling & Collection Points",
+        "address": "Seidengasse 9",
+        "opening_hours": "always",
+        "google_maps_link": "https://maps.app.goo.gl/kk85GDBBwYTfr8Uk9",
+        "latitude": 48.2002398,
+        "longitude": 16.3458812
+    },
+    {
+        "name": "Kolping Altkleidercontainer",
+        "category": "Recycling & Collection Points",
+        "address": "Schottenfeldgasse 24",
+        "opening_hours": "always",
+        "google_maps_link": "https://maps.app.goo.gl/qh7uNi4C7NGb9KSP9",
+        "latitude": 48.2002398,
+        "longitude": 16.3458812
+    },
+    {
+        "name": "Kolping Altkleidercontainer",
+        "category": "Recycling & Collection Points",
+        "address": "Mentergasse 13",
+        "opening_hours": "always",
+        "google_maps_link": "https://maps.app.goo.gl/RBWZ8gSGkTVZk1Ly9",
+        "latitude": 48.2076643,
+        "longitude": 16.3420118
+    },
+    {
+        "name": "Kolping Altkleidercontainer",
+        "category": "Recycling & Collection Points",
+        "address": "Lerchenfelder Str. 35",
+        "opening_hours": "always",
+        "google_maps_link": "https://maps.app.goo.gl/25A2toNTwJ5uLgJe8",
+        "latitude": 48.2060337,
+        "longitude": 16.3505208
+    },
+    {
+        "name": "Kolping Altkleidercontainer",
+        "category": "Recycling & Collection Points",
+        "address": "Kirchengasse 41",
+        "opening_hours": "always",
+        "google_maps_link": "https://maps.app.goo.gl/r9brP4eGvvpbB3Ye7",
+        "latitude": 48.2048769,
+        "longitude": 16.3514509
+    },
+    {
+        "name": "Kolping Altkleidercontainer",
+        "category": "Recycling & Collection Points",
+        "address": "Kenyongasse 4",
+        "opening_hours": "always",
+        "google_maps_link": "https://maps.app.goo.gl/SjzXJUdEYYzjwA4dA",
+        "latitude": 48.1989927,
+        "longitude": 16.3398611
+    },
+    {
+        "name": "Kolping Altkleidercontainer",
+        "category": "Recycling & Collection Points",
+        "address": "Kandlgasse 35",
+        "opening_hours": "always",
+        "google_maps_link": "https://maps.app.goo.gl/pPHk8EdHrwMAzaDd7",
+        "latitude": 48.2025246,
+        "longitude": 16.34018
+    },
+    {
+        "name": "Kolping Altkleidercontainer",
+        "category": "Recycling & Collection Points",
+        "address": "Bernardgasse 39",
+        "opening_hours": "always",
+        "google_maps_link": "https://maps.app.goo.gl/A39h5ovvqV3ZkNxb8",
+        "latitude": 48.2073474,
+        "longitude": 16.3389579
+    },
+    {
+        "name": "Freudich Vintage Store",
+        "category": "Stores & Shops",
+        "address": "Kaiserstraße 74, 1070 Wien",
+        "google_maps_link": "https://maps.app.goo.gl/qe44jBpmbWdyGxZH9",
+        "latitude": 48.2046605,
+        "longitude": 16.3226536
+    },
+    {
+        "name": "Nowherevintage",
+        "category": "Stores & Shops",
+        "address": "Mariahilfer Str. 22/24, 1070 Wien",
+        "google_maps_link": "https://maps.app.goo.gl/8x7witQwSszxsPxJ6",
+        "latitude": 48.200869,
+        "longitude": 16.3397133
+    },
+    {
+        "name": "Burggasse 24 Vintage Shop",
+        "category": "Stores & Shops",
+        "address": "Burggasse 24/8, 1070 Wien",
+        "google_maps_link": "https://maps.app.goo.gl/k3VWXcbJRfou8KCe6",
+        "latitude": 48.200869,
+        "longitude": 16.3397133
+    },
+    {
+        "name": "Vintage Shop by Textile House",
+        "address": "Lerchenfelder Str. 59, 1070 Wien",
+        "category": "Stores & Shops",
+        "google_maps_link": "https://maps.app.goo.gl/maZjixqPCdkrjsVD9",
+        "latitude": 48.200869,
+        "longitude": 16.3397133
+    },
+    {
+        "name": "HUMANA Vintage & Secondhand",
+        "category": "Stores & Shops",
+        "address": "Lerchenfelder Str. 45-47, 1070 Wien",
+        "google_maps_link": "https://maps.app.goo.gl/LKNnDQD7Fj13FQME9",
+        "latitude": 48.200869,
+        "longitude": 16.3397133
+    },
+    {
+        "name": "uppers & downers store",
+        "category": "Stores & Shops",
+        "address": "Burggasse 46, 1070 Wien",
+        "google_maps_link": "https://maps.app.goo.gl/aRL6eSX27Xnrh2Kd7",
+        "latitude": 48.200869,
+        "longitude": 16.3397133
+    },
+    {
+        "name": "Bootik 54",
+        "category": "Stores & Shops",
+        "address": "Neubaugasse 54, 1070 Wien",
+        "google_maps_link": "https://maps.app.goo.gl/a8Yqv6sMFVV6D9EP8",
+        "latitude": 48.200869,
+        "longitude": 16.3397133
+    },
+    {
+        "name": "Retroschatz",
+        "category": "Stores & Shops",
+        "address": "Neubaugasse 69, 1070 Wien",
+        "google_maps_link": "https://maps.app.goo.gl/1mgnNe7yCkuqu1dHA",
+        "latitude": 48.200869,
+        "longitude": 16.3397133
+    },
+    {
+        "name": "Design Second Hand Etcetera - Koppensteiner",
+        "category": "Stores & Shops",
+        "address": "Neubaugasse 77, 1070 Wien",
+        "google_maps_link": "https://maps.app.goo.gl/jKEb5pYeX3zxhCjE9",
+        "latitude": 48.200869,
+        "longitude": 16.3397133
     }
 ]
