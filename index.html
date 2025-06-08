@@ -2,48 +2,43 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Map App</title>
-        <link rel="icon" href="data:," />
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-        <script
-            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
-
-        <!-- Leaflet Awesome Markers -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"
-            integrity="sha512-cUoWMYmv4H9TGP4hbm1mIjYo90WzIQFo/5jj+P5tQcDTf+iVR59RyIj/a9fRsBxzxt5Dnv/Ex7MzRIxcDwaOLw=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"
-            integrity="sha512-8BqQ2RH4L4sQhV41ZB24fUc1nGcjmrTA6DILV/aTPYuUzo+wBdYdp0fvQ76Sxgf36p787CXF7TktWlcxu/zyOg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
-        <link rel="stylesheet" href="/styles.css" />
-        <script src="/main.js" defer></script>
+        <title>Vite App</title>
+      <script type="module" crossorigin src="/assets/index-CIQIK_JQ.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/index-Bx5tVsY6.css">
     </head>
     <body>
         <div id="app">
-            <div id="topbar">
-                <label for="category-select">Category</label>
-                <select id="category-select">
-                    <option value="all">Show all</option>
-                </select>
-                <button onclick="clearCategoryFilter()">Show all</button>
+            <div id="container">
+                <div class="draggable">I</div>
+                <div class="draggable">Love</div>
+                <div class="draggable">You</div>
+                <img
+                    class="draggable"
+                    src="https://picsum.photos/200/300"
+                    width="100"
+                    height="200"
+                />
+                <img
+                    class="draggable"
+                    src="https://picsum.photos/200/300"
+                    width="200"
+                    height="300"
+                />
+                <img
+                    class="draggable"
+                    src="https://picsum.photos/200/300"
+                    width="200"
+                    height="300"
+                />
             </div>
-            <div id="map"></div>
+            <div id="middleIsland">
+                <h1>Welcome to this page</h1>
+                <p>This is the normal info of the page</p>
+                <p id="info"></p>
+            </div>
         </div>
+        <script src="public/draggable/src/draggable.js"></script>
     </body>
 </html>

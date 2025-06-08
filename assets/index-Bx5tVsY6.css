@@ -1,0 +1,1 @@
+html,body{margin:0}#app{width:100vw;height:100vh;display:flex;justify-content:center;align-items:center}#container{position:absolute;width:100vw;height:100vh}.draggable{outline:2px solid red;display:inline-block;background-color:#0ff}#info{color:brown}
