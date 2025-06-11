@@ -1,0 +1,91 @@
+/* Variables */
+
+:root {
+  --background-color: #2e8157;
+  --text-color: white;
+  --accent-color: #ffe65b;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/avenir.ttf');
+}
+
+
+html, body {
+  margin: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Avenir', sans-serif;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  pointer-events: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.draggable {
+  pointer-events: auto;
+  display: inline-block;
+}
+
+#middleIsland {
+  color: var(--text-color);
+  border-radius: 0.5em;
+  font-size: 4em;
+  font-weight: 800;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#info {
+  font-size: 2rem;
+}
+
+
+.sloganText {
+  line-height: 100%;
+}
+
+
+strong {
+  color: var(--accent-color);
+}
+
+
+/* Upload button */
+
+input[type="file"] {
+  display: none;
+}
+
+.uploadButton {
+  font-size: 2rem;
+  border-radius: 0.2em;
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  display: flex;
+  align-items: center;
+  gap: 0.1em;
+  padding: 0.2em;
+  cursor: pointer;
+}
+
+.uploadIcon {
+  width: 1em;
+  height: 1em;
+}
